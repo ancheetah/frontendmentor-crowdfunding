@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Card, CardContent, Button, 
+import { Container, Card, CardContent, CardActions, Button, 
     Avatar, LinearProgress } from '@material-ui/core';
 import BookmarkIcon from '@material-ui/icons/Bookmark';
+import About from './AboutComponent';
 
 export default function Main() {
     return (
@@ -12,14 +13,16 @@ export default function Main() {
                 <Avatar alt="Mastercraft Logo" src="/images/logo-mastercraft.svg" />
                 <h2>Mastercraft Bamboo Monitor Riser</h2>
                 <CardContent>
-                    A beautifully handcrafted monitor stand to reduce neck and eye strain.
+                    <p>A beautifully handcrafted monitor stand to reduce neck and eye strain.</p>
                 </CardContent>
-                <Button variant="contained" color="primary" disableElevation>
-                    Back this project
-                </Button>
-                <Button variant="contained" color="default">
-                    <BookmarkIcon/>
-                </Button>
+                <CardActions>
+                    <Button variant="contained" color="primary" disableElevation>
+                        Back this project
+                    </Button>
+                    <Button variant="contained" color="default">
+                        <BookmarkIcon/>
+                    </Button>
+                </CardActions>
             </Card>
 
             {/* Project Progress */}
@@ -34,6 +37,8 @@ export default function Main() {
                 <p>days left</p>
                 <LinearProgress variant="determinate" value={ 89914 * 100 / 100000 }/>
             </Card>
+
+            <About />
 
         </Container>
     );
