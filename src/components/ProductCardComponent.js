@@ -8,12 +8,12 @@ export default function ProductCard(props) {
                 props.products.map( product => {
                     return(
                         <Card variant="outlined">
-                            {/* <h3>{product.name}</h3>
-                            <h4>Pledge {product.pledge} or more</h4> */}
-                            <CardHeader 
+                            <h3>{product.name}</h3>
+                            <h4>Pledge {product.pledge} or more</h4>
+                            {/* <CardHeader 
                                 title={product.name}
                                 subheader={`Pledge ${product.pledge} or more`}
-                            />
+                            /> */}
                             <CardContent>
                                 {product.desc}
                             </CardContent>

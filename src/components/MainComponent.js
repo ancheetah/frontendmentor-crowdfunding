@@ -9,14 +9,14 @@ export default function Main() {
         <Container maxWidth="xs">
 
             {/* Project Info */}
-            <Card variant="outlined">
+            <Card className="project-info" variant="outlined">
                 <Avatar alt="Mastercraft Logo" src="/images/logo-mastercraft.svg" />
                 <h2>Mastercraft Bamboo Monitor Riser</h2>
                 <CardContent>
                     <p>A beautifully handcrafted monitor stand to reduce neck and eye strain.</p>
                 </CardContent>
                 <CardActions>
-                    <Button variant="contained" color="primary" disableElevation>
+                    <Button variant="contained" color="primary">
                         Back this project
                     </Button>
                     <Button variant="contained" color="default">
@@ -26,16 +26,18 @@ export default function Main() {
             </Card>
 
             {/* Project Progress */}
-            <Card variant="outlined">
-                <h1>$89,914</h1>
-                <p>of $100,000 backed</p>
-                <hr />
-                <h1>5,007</h1>
-                <p>total backers</p>
-                <hr />
-                <h1>56</h1>
-                <p>days left</p>
-                <LinearProgress variant="determinate" value={ 89914 * 100 / 100000 }/>
+            <Card className="progress" variant="outlined">
+                <CardContent>
+                    <h1>$89,914</h1>
+                    <p>of $100,000 backed</p>
+                    <hr style={{width: "6rem"}} />
+                    <h1>5,007</h1>
+                    <p>total backers</p>
+                    <hr style={{width: "6rem"}} />
+                    <h1>56</h1>
+                    <p>days left</p>
+                    <LinearProgress variant="determinate" value={ 89914 * 100 / 100000 }/>
+                </CardContent>
             </Card>
 
             <About />
