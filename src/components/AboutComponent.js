@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import { Card, CardContent, CardActionArea } from '@material-ui/core';
-import PRODUCTS from '../shared/products';
+import { Card, CardContent } from '@material-ui/core';
+import { PRODUCTS } from '../shared/products';
+import ProductCard from './ProductCardComponent';
 
 class About extends Component {
     
@@ -26,9 +27,7 @@ class About extends Component {
                         to allow notepads, pens, and USB sticks to be stored under the stand.
                     </p>
                 </CardContent>
-                <CardActionArea>
-                    
-                </CardActionArea>
+                <ProductCard products={this.state.products} />
             </Card>
         );
     }
