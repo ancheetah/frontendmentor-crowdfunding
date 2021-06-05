@@ -29,11 +29,18 @@ const theme = createMuiTheme({
 
 theme.props = {
   MuiButton: {
-    disableElevation: true
+    disableElevation: true,
+    size: 'small',
+    textSizeSmall: true
   }
 }
 
 theme.overrides = {
+  MuiCard: {
+    root: {
+      margin: '16px 0'
+    }
+  },
   MuiButton: {
     root: {
       borderRadius: 50,
@@ -42,7 +49,7 @@ theme.overrides = {
   },
   MuiLinearProgress: {
     root: {
-      height: 10,
+      height: 15,
       borderRadius: 50
     }
   }
