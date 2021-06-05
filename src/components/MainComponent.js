@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Card, CardContent, CardActions, Button, 
+import { Container, Card, CardContent, CardActions, Button, IconButton, 
     Avatar, LinearProgress } from '@material-ui/core';
 import BookmarkIcon from '@material-ui/icons/Bookmark';
 import About from './AboutComponent';
@@ -19,9 +19,13 @@ export default function Main() {
                     <Button variant="contained" color="primary">
                         Back this project
                     </Button>
-                    <Button variant="contained" color="default">
+                    <IconButton>
                         <BookmarkIcon/>
-                    </Button>
+                    </IconButton>
+                    {/* <Button variant="contained" startIcon={<BookmarkIcon/>}>
+                        Bookmark
+                    </Button> */}
+
                 </CardActions>
             </Card>
 

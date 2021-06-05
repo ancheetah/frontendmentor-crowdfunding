@@ -1,21 +1,21 @@
 import React from 'react';
-import { Card, CardHeader, CardContent, CardActionArea, CardActions, Button } from '@material-ui/core';
+import { Card, Box, CardContent, CardActions, Button } from '@material-ui/core';
 
 export default function ProductCard(props) {
     return (
-        <CardActionArea>
+        <Box p={2}>
             {
                 props.products.map( product => {
                     return(
                         <Card variant="outlined">
-                            <h3>{product.name}</h3>
-                            <h4>Pledge {product.pledge} or more</h4>
-                            {/* <CardHeader 
+                            {/* <CardHeader
                                 title={product.name}
                                 subheader={`Pledge ${product.pledge} or more`}
                             /> */}
                             <CardContent>
-                                {product.desc}
+                                <h3>{product.name}</h3>
+                                <h4>Pledge {product.pledge} or more</h4>
+                                <p>{product.desc}</p>
                             </CardContent>
                             <CardActions>
                                 <span><h1>{product.stock}</h1></span><span><p>left</p></span>
@@ -25,6 +25,6 @@ export default function ProductCard(props) {
                     )
                 })
             }
-        </CardActionArea>
+        </Box>
     );
 }
